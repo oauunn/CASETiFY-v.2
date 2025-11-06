@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASETiFY - main</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        /* 메뉴 */
+        $(function () {
+
+            // 메뉴 버튼 클릭 시 토글
+            $('.menu-btn').on('click', function (e) {
+                e.stopPropagation(); // 이벤트 전파 방지
+                $('.menu-nav').toggleClass('active');
+                $('body').toggleClass('active');
+            });
+
+            // 문서 전체 클릭 시
+            $(document).on('click', function (e) {
+                // 메뉴가 열려 있고, 클릭한 곳이 메뉴 내부나 버튼이 아닐 때 닫기
+                if (
+                    $('.menu-nav').hasClass('active') &&
+                    !$(e.target).closest('.menu-nav, .menu-btn').length
+                ) {
+                    $('.menu-nav').removeClass('active');
+                    $('body').removeClass('active');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <section id="banner">
+        <div class="inner">
+            <div class="text">
+                <a href="#"><img src="img/prev.png" alt="이전"></a>
+                <p>50,000원 이상 구매 시 전 세계 무료배송 | <a href="#">구매하기</a> | <a href="#">이용약관</a></p>
+                <a href="#"><img src="img/next.png" alt="다음"></a>
+            </div><!-- .text end -->
+        </div><!-- .inner end -->
+    </section><!-- #banner end -->
+
+    <section id="header">
+        <div class="inner">
+            <button class="menu-btn">
+                <img src="img/list.png" alt="메뉴">
+            </button><!-- menu-btn -->
+
+            <nav class="menu-nav">
+                <ul class="gnb">
+                    <h1><a href="#" class="depth-01">HOME</a></h1>
+
+                    <li>
+                        <a href="#" class="depth-01">CASETiFY Cases</a>
+                        <ul class="depth-02">
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Google</a></li>
+                        </ul><!-- .depth-02 end -->
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">CASETiFY Acc</a>
+                        <ul class="depth-02">
+                            <li><a href="#">MagSafe</a></li>
+                            <li><a href="#">Charm & Strap</a></li>
+                        </ul><!-- .depth-02 end -->
+                    </li>
+
+                    <li>
+                        <a href="#" class="depth-01">Design</a>
+                        <ul class="depth-02">
+                            <li><a href="#">Artist & Signature</a></li>
+                            <li><a href="#">Custom</a></li>
+                            <li><a href="#">Co-Lab</a></li>
+                        </ul><!-- .depth-02 end -->
+                    </li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .menu-nav end -->
+
+            <div class="logo">
+                <a href="#"><img src="img/casetify-logo.png" alt="로고"></a>
+            </div><!-- .logo end -->
+            <div class="right-icon">
+                <ul>
+                    <li><a href="#"><img src="img/profile.png" alt="마이페이지"></a></li>
+                    <li><a href="#"><img src="img/bag.png" alt="장바구니"></a></li>
+                </ul>
+            </div><!-- .right-icon end -->
+        </div><!-- .inner end -->
+    </section><!-- #header end -->
+
+    <section id="main-visual">
+        <div class="inner">
+            <ul class="list">
+                <li><a href="#"><img src="img/mainvisual1.jpg" alt="메인비주얼1"></a></li>
+                <li><a href="#"><img src="img/mainvisual2.jpg" alt="메인비주얼2"></a></li>
+                <li><a href="#"><img src="img/mainvisual3.jpg" alt="메인비주얼3"></a></li>
+            </ul><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- #main-visual end -->
+
+    <section id="footer">
+        <div class="inner">
+            <div class="left-box">
+                <p>케이스티파이 : 케이스타그램 리미티드(Casetify: Casetagram Limited) | 케이스티파이 유한회사(CASETiFY) | 대표 : 응푸이순 웨슬리(Wesley
+                    Ng)</br>사업자등록번호 : 580-88-02026 | 통신판매업 신고번호 : 제 2021-서울강남-03049호 주소 : 서울 강남구 영동대로 616 아남빌딩 2층,
+                    케이스티파이</br> CS Center : hello@casetify.com / 1833-6292 | 휴무 : 토요일, 일요일, 공휴일 휴무</p>
+            </div><!-- .left-box end -->
+            <div class="right-box">
+                <div class="top">
+                    <ul class="text">
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul><!-- .text end -->
+                    <ul class="icon">
+                        <li><a href="#"><img src="img/facebook.png" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="img/insta.png" alt="인스타그램"></a></li>
+                        <li><a href="#"><img src="img/pinter.png" alt="핀터레스트"></a></li>
+                        <li><a href="#"><img src="img/tiktok.png" alt="틱톡"></a></li>
+                    </ul><!-- .icon end -->
+                </div><!-- .top end -->
+                <div class="bottom">
+                    <span>Copyright ⓒ 2025 CASETiFY | <a href="#">개인정보 처리방침</a> | <a href="#">약관</a></span>
+                    <h1>CASETiFY</h1>
+                </div><!-- .bottom end -->
+            </div><!-- .right-box end -->
+        </div><!-- .inner end -->
+    </section><!-- #footer end -->
+</body>
+
+</html>

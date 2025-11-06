@@ -1,0 +1,250 @@
+@charset "utf-8";
+@import url('reset.css');
+
+/* 배너 */
+/* 홈 , 상품페이지 , 상세페이지 */
+#banner {
+    background-color: #FB5B48;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+#banner .text {
+    margin: 0 auto;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40px;
+    font-size: 12px;
+    color: #1c1c1c;
+    font-family: 'Source Code Pro', 'Noto Sans KR';
+}
+
+#banner .text p > a {
+    color: #777777;
+    text-decoration: underline;
+}
+#banner .text img {
+    display: block;
+}
+
+
+/* 공통 헤더 , 메뉴 */
+#header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+    color: #1c1c1c;
+    margin-top: 40px;
+}
+
+#header .inner {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1600px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .inner .menu-nav {
+    width: 20%;
+    height: 100%;
+    background-color: #F6E163;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    padding: 70px;
+    /* display: none; */
+    transition: left 0.4s ease;
+    overflow-y: auto;
+}
+
+/* 스크롤 모양 없애기 */
+#header .inner .menu-nav::-webkit-scrollbar {
+    display: none;
+}
+
+#header .inner .menu-nav.active {
+    /* display: block; */
+    left: 0;
+}
+
+#header .inner .menu-nav .gnb {
+    font-family: 'Zalando Sans Expanded';
+    color: #222222;
+}
+
+#header .inner .menu-nav .gnb h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FB5B48;
+    margin-bottom: 40px;
+    transition: all 0.1s ease;
+}
+
+#header .inner .menu-nav .gnb h1:hover {
+    filter: blur(1px) contrast(2) brightness(1.2);
+    transform: scale(1.01);
+}
+
+#header .inner .menu-nav .gnb>li {
+    margin-bottom: 40px;
+}
+
+#header .inner .menu-nav .gnb>li .depth-01 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#header .inner .menu-nav .gnb>li .depth-01:hover {
+    color: #FB5B48;
+    font-weight: 600;
+}
+
+#header .inner .menu-nav .gnb>li .depth-02 {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+#header .inner .menu-nav .gnb>li .depth-02 li {
+    padding: 10px 0;
+}
+
+#header .inner .menu-nav .gnb>li .depth-02 li:hover {
+    color: #777777;
+}
+
+#header .inner .menu-btn {
+    align-items: center;
+    text-align: center;
+    display: block;
+}
+#header .inner .menu-btn:hover {
+    filter: blur(1px) contrast(1.2) brightness(1.2);
+    transform: scale(1.01);
+}
+#header .inner .menu-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#header .inner .logo {
+    width: 120px;
+    height: 40px;
+}
+
+#header .inner .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#header .inner .right-icon ul {
+    display: flex;
+    gap: 20px;
+}
+#header .inner .right-icon ul li:hover {
+    filter: blur(1px) contrast(1.2) brightness(1.2);
+    transform: scale(1.01);
+}
+
+
+/* 메인 */
+#main-visual {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 200px;
+}
+#main-visual .inner {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+#main-visual .inner ul {
+    display: flex;
+    overflow: hidden;
+}
+#main-visual .inner ul li {}
+
+
+/* 푸터 */
+#footer {
+    margin: 0 auto;
+    font-family: 'Lato';
+    font-size: 12px;
+    line-height: 2;
+    color: #1c1c1c;
+    margin-bottom: 50px;
+}
+
+#footer .inner {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#footer .inner .right-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+#footer .inner .right-box .top .text {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    font-family: 'Lato';
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+#footer .inner .right-box .top .text li:hover {
+    text-decoration: underline;
+}
+
+#footer .inner .right-box .icon {
+    display: flex;
+    gap: 20px;
+}
+
+#footer .inner .right-box .icon li {
+    width: 24px;
+}
+
+#footer .inner .right-box .icon li img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#footer .inner .right-box .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#footer .inner .right-box .bottom span a:hover {
+    text-decoration: underline;
+}
+
+#footer .inner .right-box .bottom h1 {
+    font-family: 'Syncopate';
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 51px;
+    letter-spacing: -1px;
+    color: #FB5B48;
+}
