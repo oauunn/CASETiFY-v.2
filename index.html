@@ -31,6 +31,20 @@
             });
         });
 
+        $('.menu-nav h1 .depth-01').on('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'main.html';
+        });
+
+        // Apple 클릭 시 item.html로 이동
+        $('.menu-nav .depth-02 a').filter(function () {
+            return $(this).text().trim() === 'Apple';
+        }).on('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'list.html';
+        });
+
+
         /* 메인 비주얼 */
         $(function () {
             // 화면에서 마우스 움직일 때 실행

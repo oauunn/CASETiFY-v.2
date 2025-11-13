@@ -29,12 +29,18 @@
                     $('body').removeClass('active');
                 }
             });
+
+            // ✅ 첫 번째 상품 클릭 시 item.html로 이동
+            $('.list .item').first().find('.image a').on('click', function (e) {
+                e.preventDefault();
+                window.location.href = 'item.html';
+            });
         });
     </script>
 </head>
 
 <body>
-<section id="banner">
+    <section id="banner">
         <div class="inner">
             <div class="text">
                 <a href="#"><img src="img/prev.png" alt="이전"></a>
@@ -153,7 +159,8 @@
 
                 <div class="item">
                     <div class="image">
-                        <a href="#"><img src="img/Daisy by Katie-s Collective.png" alt="Daisy by Katie-s Collective"></a>
+                        <a href="#"><img src="img/Daisy by Katie-s Collective.png"
+                                alt="Daisy by Katie-s Collective"></a>
                     </div><!-- .image end -->
                     <div class="text">
                         <h3>Daisy by Katie-s Collective</h3>
@@ -165,7 +172,8 @@
 
                 <div class="item">
                     <div class="image">
-                        <a href="#"><img src="img/Skater JOHN -Hello my friend 04.png" alt="Skater JOHN -Hello my friend 04"></a>
+                        <a href="#"><img src="img/Skater JOHN -Hello my friend 04.png"
+                                alt="Skater JOHN -Hello my friend 04"></a>
                     </div><!-- .image end -->
                     <div class="text">
                         <h3>Skater JOHN -Hello my friend 04</h3>
