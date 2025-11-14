@@ -195,8 +195,7 @@
 }
 
 #main .inner .top-banner {
-    margin-bottom: 100px;
-    overflow: hidden;
+    margin-bottom: 200px;
 }
 
 #main .inner .top-banner .banner-list {
@@ -218,43 +217,48 @@
     object-fit: cover;
 }
 
+
 #main .inner .new {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
     margin-bottom: 100px;
 }
+
 #main .inner .new h1 {
     font-size: 48px;
-    line-height: 1.5;
+    line-height: 72px;
     font-weight: bold;
     color: #222222;
 }
+
 #main .inner .new h2 {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 24px;
     font-weight: 500;
     font-family: 'Source Code Pro', 'Noto Sans KR';
-    color: #333333;
 }
 
 #main .inner .new .item-list {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
 }
 
 #main .inner .new .item-list .item {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
+    text-align: center;
 }
 
-#main .inner .new .item-list .item .image {
+#main .inner .new .item-list .item .image:hover {
     border-radius: 50%;
-    background-color: #222222;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 #main .inner .new .item-list .item .image img {
@@ -270,7 +274,7 @@
     align-items: center;
 }
 
-#main .inner .new .item-list .item .text h2 {
+#main .inner .new .item-list .item .text h3 {
     font-family: 'Zalando Sans Expanded';
     font-size: 24px;
     font-weight: 600;
@@ -278,19 +282,9 @@
     color: #222222;
 }
 
-#main .inner .new .item-list .item .text h3 {
-    font-family: 'Source Code Pro', 'Noto Sans KR';
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 19.5px;
-    color: #505050;
-}
-
 #main .inner .new .item-list .item .text .h4 {
     display: flex;
     gap: 10px;
-    align-items: center;
-    text-align: center;
     font-family: 'Source Code Pro', 'Noto Sans KR';
     font-size: 16px;
     font-weight: 500;
@@ -298,7 +292,10 @@
     color: #222222;
 }
 
-#main .inner .new .item-list .item .text .h4 img {}
+#main .inner .new .item-list .item .text .h4 img {
+    width: 100%;
+    object-fit: cover;
+}
 
 
 
