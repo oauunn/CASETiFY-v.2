@@ -259,9 +259,12 @@
 }
 #main .inner .new .item-list,
 #main .inner .colab .item-list {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    background-color: #FAFAFA;
+    padding: 50px;
+    border-radius: 20px;
     /* align-items: center;
     text-align: center; */
 }
@@ -275,12 +278,12 @@
     text-align: center;
 }
 
-#main .inner .new .item-list .item .image:hover,
+/* #main .inner .new .item-list .item .image:hover,
 #main .inner .colab .item-list .item .image:hover {
     border-radius: 50%;
     background: #EEAECA;
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-}
+} */
 
 #main .inner .new .item-list .item .image img,
 #main .inner .colab .item-list .item .image img {
@@ -310,6 +313,7 @@
 #main .inner .new .item-list .item .text .h4,
 #main .inner .colab .item-list .item .text .h4 {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     font-family: 'Source Code Pro', 'Noto Sans KR';
     font-size: 16px;
@@ -320,7 +324,6 @@
 
 #main .inner .new .item-list .item .text .h4 img,
 #main .inner .colab .item-list .item .text .h4 img {
-    width: 100%;
     object-fit: cover;
 }
 
