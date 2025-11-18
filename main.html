@@ -47,6 +47,21 @@
                 }
             });
         });
+
+        $(function () {
+            const $list = $('#main-visual .list');
+            const slideSpeed = 5000;
+            const slideTime = 800;
+
+            setInterval(() => {
+                const width = $('#main-visual .inner').width();
+
+                $list.animate({ left: -width }, slideTime, function () {
+                    $(this).append($(this).children().first());
+                    $(this).css('left', 0);
+                });
+            }, slideSpeed);
+        });
     </script>
 </head>
 
@@ -199,7 +214,7 @@
                             <h3>Cardcaptor Sakura Clear Card Case</h3>
                             <ul class="h4">
                                 <li>
-                                    <h4>10,9000원</h4>
+                                    <h4>109,000원</h4>
                                 </li>
                                 <li><img src="img/del.png" alt="무료배송"></li>
                             </ul><!-- .h4 end -->
@@ -215,7 +230,7 @@
                             <h3>Cardcaptor Sakura Clear Card Cover Case</h3>
                             <ul class="h4">
                                 <li>
-                                    <h4>10,9000원</h4>
+                                    <h4>109,000원</h4>
                                 </li>
                                 <li><img src="img/del.png" alt="무료배송"></li>
                             </ul><!-- .h4 end -->
@@ -231,7 +246,7 @@
                             <h3>Cardcaptor Sakura Magic Items Medley Phone Case</h3>
                             <ul class="h4">
                                 <li>
-                                    <h4>10,9000원</h4>
+                                    <h4>109,000원</h4>
                                 </li>
                                 <li><img src="img/del.png" alt="무료배송"></li>
                             </ul><!-- .h4 end -->
