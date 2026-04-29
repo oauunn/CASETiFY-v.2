@@ -6,54 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASETiFY - iPhone Cases</title>
     <link rel="stylesheet" href="css/list.css">
-    <!-- Zalando Sans Expanded -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <!-- Source Code Pro -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <!-- Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    
     <script src="lib/jquery-3.7.1.min.js"></script>
-    <script>
-        /* 메뉴 */
-        $(function () {
-
-            // 메뉴 버튼 클릭 시 토글
-            $('.menu-btn').on('click', function (e) {
-                e.stopPropagation(); // 이벤트 전파 방지
-                $('.menu-nav').toggleClass('active');
-                $('body').toggleClass('active');
-            });
-
-            // 문서 전체 클릭 시
-            $(document).on('click', function (e) {
-                // 메뉴가 열려 있고, 클릭한 곳이 메뉴 내부나 버튼이 아닐 때 닫기
-                if (
-                    $('.menu-nav').hasClass('active') &&
-                    !$(e.target).closest('.menu-nav, .menu-btn').length
-                ) {
-                    $('.menu-nav').removeClass('active');
-                    $('body').removeClass('active');
-                }
-            });
-
-            // ✅ 첫 번째 상품 클릭 시 item.html로 이동
-            $('.list .item').first().find('.image a').on('click', function (e) {
-                e.preventDefault();
-                window.location.href = 'item.html';
-            });
-        });
-    </script>
+    
 </head>
 
 <body>
@@ -75,12 +30,12 @@
 
             <nav class="menu-nav">
                 <ul class="gnb">
-                    <h1><a href="#" class="depth-01">HOME</a></h1>
+                    <h1><a href="main.html" class="depth-01">HOME</a></h1>
 
                     <li>
                         <a href="#" class="depth-01">CASETiFY Cases</a>
                         <ul class="depth-02">
-                            <li><a href="#">Apple</a></li>
+                            <li><a href="list.html">Apple</a></li>
                             <li><a href="#">Samsung</a></li>
                             <li><a href="#">Google</a></li>
                         </ul><!-- .depth-02 end -->
@@ -106,7 +61,7 @@
             </nav><!-- .menu-nav end -->
 
             <div class="logo">
-                <a href="#"><img src="img/casetify-logo.png" alt="로고"></a>
+                <a href="index.html"><img src="img/casetify-logo.png" alt="로고"></a>
             </div><!-- .logo end -->
             <div class="right-icon">
                 <ul>
@@ -243,6 +198,37 @@
             </div><!-- .right-box end -->
         </div><!-- .inner end -->
     </section><!-- #footer end -->
+
+    <script>
+        /* 메뉴 */
+        $(function () {
+
+            // 메뉴 버튼 클릭 시 토글
+            $('.menu-btn').on('click', function (e) {
+                e.stopPropagation(); // 이벤트 전파 방지
+                $('.menu-nav').toggleClass('active');
+                $('body').toggleClass('active');
+            });
+
+            // 문서 전체 클릭 시
+            $(document).on('click', function (e) {
+                // 메뉴가 열려 있고, 클릭한 곳이 메뉴 내부나 버튼이 아닐 때 닫기
+                if (
+                    $('.menu-nav').hasClass('active') &&
+                    !$(e.target).closest('.menu-nav, .menu-btn').length
+                ) {
+                    $('.menu-nav').removeClass('active');
+                    $('body').removeClass('active');
+                }
+            });
+
+            // ✅ 첫 번째 상품 클릭 시 item.html로 이동
+            $('.list .item').first().find('.image a').on('click', function (e) {
+                e.preventDefault();
+                window.location.href = 'item.html';
+            });
+        });
+    </script>
 </body>
 
 </html>
