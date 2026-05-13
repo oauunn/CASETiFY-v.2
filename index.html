@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASETiFY - intro</title>
     <link rel="stylesheet" href="css/index.css">
-    
+
     <script src="lib/jquery-3.7.1.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -71,6 +71,15 @@
         </div><!-- .cursor end -->
     </section><!-- .main_visual end -->
 
+    <div id="popup" class="popup-wrapper">
+        <div class="popup-content">
+            <p>좌측 메뉴 아이콘 클릭 후,</p>
+            <p><strong>HOME</strong> 탭을 클릭하면 <strong>메인 페이지</strong>로 넘어갑니다.</p>
+            <p><strong>Apple</strong> 탭을 클릭하면 <strong>리스트 페이지</strong>로 넘어갑니다.</p>
+        </div><!-- .popup-content end -->
+        <button id="closeBtn">닫기</button><!-- #closeBtn end -->
+    </div><!-- #popup.popup-wrapper end -->
+
     <script>
         /* 메뉴 */
         $(function () {
@@ -84,7 +93,6 @@
 
             // 문서 전체 클릭 시
             $(document).on('click', function (e) {
-                // 메뉴가 열려 있고, 클릭한 곳이 메뉴 내부나 버튼이 아닐 때 닫기
                 if (
                     $('.menu-nav').hasClass('active') &&
                     !$(e.target).closest('.menu-nav, .menu-btn').length
@@ -100,7 +108,6 @@
             window.location.href = 'main.html';
         });
 
-        // Apple 클릭 시 item.html로 이동
         $('.menu-nav .depth-02 a').filter(function () {
             return $(this).text().trim() === 'Apple';
         }).on('click', function (e) {
@@ -135,8 +142,15 @@
             $('video').on('mouseleave', function () {
                 $('.cursor').removeClass('active');
             });
-
         });//script end
+
+        // 팝업창
+        const popup = document.getElementById('popup');
+        const closeBtn = document.getElementById('closeBtn');
+
+        closeBtn.addEventListener('click', () => {
+            popup.classList.add('close');
+        });
     </script>
 </body>
 

@@ -351,3 +351,45 @@
     letter-spacing: -1px;
     color: #FB5B48;
 }
+
+#popup.popup-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F6E163;
+    font-family: 'Pretendard', 'Inter';
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+}
+
+#popup.popup-wrapper .popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+#popup.popup-wrapper .popup-content p {
+    font-size: 18px;
+    color: #1c1c1c;
+}
+
+#popup.popup-wrapper .popup-content p strong {
+    color: #FB5B48;
+    font-weight: 600;
+}
+
+#closeBtn {
+    font-size: 16px;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 10px;
+}
+
+#popup.popup-wrapper.close {
+    display: none;
+}

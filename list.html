@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASETiFY - iPhone Cases</title>
     <link rel="stylesheet" href="css/list.css">
-    
+
     <script src="lib/jquery-3.7.1.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -199,6 +199,14 @@
         </div><!-- .inner end -->
     </section><!-- #footer end -->
 
+    <div id="popup" class="popup-wrapper">
+        <div class="popup-content">
+            <p>좌측의 <strong>Meadow Green Sweater</strong> 를 클릭하면</p>
+            <p>해당 상품의 <strong>상세 페이지</strong>로 넘어갑니다.</p>
+        </div><!-- .popup-content end -->
+        <button id="closeBtn">닫기</button><!-- #closeBtn end -->
+    </div><!-- #popup.popup-wrapper end -->
+
     <script>
         /* 메뉴 */
         $(function () {
@@ -212,7 +220,6 @@
 
             // 문서 전체 클릭 시
             $(document).on('click', function (e) {
-                // 메뉴가 열려 있고, 클릭한 곳이 메뉴 내부나 버튼이 아닐 때 닫기
                 if (
                     $('.menu-nav').hasClass('active') &&
                     !$(e.target).closest('.menu-nav, .menu-btn').length
@@ -222,12 +229,20 @@
                 }
             });
 
-            // ✅ 첫 번째 상품 클릭 시 item.html로 이동
             $('.list .item').first().find('.image a').on('click', function (e) {
                 e.preventDefault();
                 window.location.href = 'item.html';
             });
         });
+
+        // 팝업창
+        const popup = document.getElementById('popup');
+        const closeBtn = document.getElementById('closeBtn');
+
+        closeBtn.addEventListener('click', () => {
+            popup.classList.add('close');
+        });
+
     </script>
 </body>
 

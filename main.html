@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="lib/jquery-3.7.1.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -231,6 +231,14 @@
         </div><!-- .inner end -->
     </section><!-- #footer end -->
 
+    <div id="popup" class="popup-wrapper">
+        <div class="popup-content">
+            <p>상단의 <strong>로고 이미지</strong>를 클릭하면</p>
+            <p><strong>인트로 페이지</strong>로 넘어갑니다.</p>
+        </div><!-- .popup-content end -->
+        <button id="closeBtn">닫기</button><!-- #closeBtn end -->
+    </div><!-- #popup.popup-wrapper end -->
+
     <script>
         /* 메뉴 */
         $(function () {
@@ -268,6 +276,14 @@
                     $(this).css('left', 0);
                 });
             }, slideSpeed);
+        });
+
+        // 팝업창
+        const popup = document.getElementById('popup');
+        const closeBtn = document.getElementById('closeBtn');
+
+        closeBtn.addEventListener('click', () => {
+            popup.classList.add('close');
         });
     </script>
 </body>

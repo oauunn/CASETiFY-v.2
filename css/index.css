@@ -2,8 +2,10 @@
 @import url('reset.css');
 @import url('font.css');
 
-html, body {
-  overflow: hidden;  /* 스크롤바 안 보이게 */
+html,
+body {
+    overflow: hidden;
+    /* 스크롤바 안 보이게 */
 }
 
 body.active {
@@ -107,10 +109,12 @@ body.active {
     text-align: center;
     display: block;
 }
+
 #header .inner .menu-btn:hover {
     filter: blur(1px) contrast(1.2) brightness(1.2);
     transform: scale(1.01);
 }
+
 #header .inner .menu-btn img {
     width: 100%;
     height: 100%;
@@ -132,6 +136,7 @@ body.active {
     display: flex;
     gap: 20px;
 }
+
 #header .inner .right-icon ul li:hover {
     filter: blur(1px) contrast(1.2) brightness(1.2);
     transform: scale(1.01);
@@ -180,4 +185,47 @@ body.active {
 
 .cursor .in span {
     font-family: 'Lato';
+}
+
+
+#popup.popup-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F6E163;
+    font-family: 'Pretendard', 'Inter';
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+}
+
+#popup.popup-wrapper .popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+#popup.popup-wrapper .popup-content p {
+    font-size: 18px;
+    color: #1c1c1c;
+}
+
+#popup.popup-wrapper .popup-content p strong {
+    color: #FB5B48;
+    font-weight: 600;
+}
+
+#closeBtn {
+    font-size: 16px;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 10px;
+}
+
+#popup.popup-wrapper.close {
+    display: none;
 }
